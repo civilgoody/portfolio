@@ -4,41 +4,43 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Custom blue theme colors - for direct use */
+  /* Updated color scheme - Better contrast, less blue dominance */
   --primary-blue: #0090f1;
-  --primary-dark: #0f172a;
-  --text-primary: #f8fafc;
-  --text-secondary: #64748b;
-  --text-muted: #475569;
+  --primary-dark: #0a0e1a; /* Darker for better contrast */
+  --secondary-dark: #1a1f2e; /* New secondary dark */
+  --text-primary: #ffffff; /* Pure white for better contrast */
+  --text-secondary: #e2e8f0; /* Lighter secondary text */
+  --text-muted: #94a3b8; /* Better muted text */
   --accent-success: #10b981;
   --accent-warning: #f59e0b;
 
-  /* Shadcn/ui color system - override with our blue theme */
+  /* Shadcn/ui color system - updated for better contrast */
   --radius: 0.625rem;
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --popover: #1e293b;
-  --popover-foreground: #f8fafc;
+  --background: #0a0e1a;
+  --foreground: #ffffff;
+  --card: #1a1f2e;
+  --card-foreground: #ffffff;
+  --popover: #1a1f2e;
+  --popover-foreground: #ffffff;
   --primary: #0090f1;
-  --primary-foreground: #0f172a;
+  --primary-foreground: #0a0e1a;
   --secondary: #374151;
-  --secondary-foreground: #f8fafc;
-  --muted: #374151;
-  --muted-foreground: #64748b;
+  --secondary-foreground: #ffffff;
+  --muted: #2d3748;
+  --muted-foreground: #94a3b8;
   --accent: #374151;
-  --accent-foreground: #f8fafc;
+  --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --destructive-foreground: #f8fafc;
+  --destructive-foreground: #ffffff;
   --border: #374151;
-  --input: #374151;
+  --input: #2d3748;
   --ring: #0090f1;
 }
 
 @theme inline {
   --color-primary-blue: var(--primary-blue);
   --color-primary-dark: var(--primary-dark);
+  --color-secondary-dark: var(--secondary-dark);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
@@ -148,23 +150,7 @@
   }
 }
 
-/* Avatar-inspired background gradients */
-.bg-element-gradient {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-}
-
-.bg-water-flow {
-  background: linear-gradient(
-    45deg,
-    #0f172a 0%,
-    #1e293b 25%,
-    #0090f1 50%,
-    #1e293b 75%,
-    #0f172a 100%
-  );
-  background-size: 200% 200%;
-  animation: flow 6s ease-in-out infinite;
-}
+/* Removed old gradient classes - now using consistent inline gradients */
 
 /* Custom animations */
 @keyframes fluid-rise {
@@ -220,15 +206,7 @@
   }
 }
 
-@keyframes flow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
+/* Removed flow animation - no longer needed */
 
 /* Utility classes */
 .animate-fluid-rise {

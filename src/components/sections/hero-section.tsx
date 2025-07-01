@@ -15,9 +15,12 @@ export function HeroSection() {
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-element-gradient">
-        <div className="absolute inset-0 bg-water-flow opacity-20" />
+      {/* Subtle animated background - consistent with other sections */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-secondary-dark/50 to-primary-dark" />
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary-blue/20 rounded-full animate-pulse" />
+        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-primary-blue/30 rounded-full animate-pulse delay-1000" />
+        <div className="absolute bottom-1/3 left-2/3 w-1.5 h-1.5 bg-primary-blue/25 rounded-full animate-pulse delay-500" />
       </div>
 
       {/* Content */}
@@ -63,13 +66,13 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="#projects"
-              className="bg-primary-blue text-primary-dark px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 precision-focus"
+              className="bg-primary-blue text-primary-dark px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 precision-focus shadow-lg"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="border border-primary-blue text-primary-blue px-8 py-3 rounded-lg font-semibold hover:bg-primary-blue hover:text-primary-dark transition-all duration-300 precision-focus"
+              className="border-2 border-primary-blue text-primary-blue px-8 py-3 rounded-lg font-semibold hover:bg-primary-blue hover:text-primary-dark transition-all duration-300 precision-focus shadow-lg"
             >
               Get In Touch
             </a>
@@ -102,8 +105,8 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-text-muted rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-text-muted rounded-full mt-2 animate-pulse" />
+        <div className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center bg-secondary-dark/50 backdrop-blur-sm">
+          <div className="w-1 h-3 bg-primary-blue rounded-full mt-2 animate-pulse" />
         </div>
       </div>
     </section>
