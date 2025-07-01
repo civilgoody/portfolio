@@ -1,26 +1,15 @@
 import { MainNav } from "@/components/navigation/main-nav";
 import { HeroSection } from "@/components/sections/hero-section";
+import { AboutSection } from "@/components/sections/about-section";
 
 export default function HomePage() {
   return (
     <main className="relative">
       <MainNav />
       <HeroSection />
+      <AboutSection />
 
-      {/* Placeholder sections - we'll build these next */}
-      <section
-        id="about"
-        className="min-h-screen flex items-center justify-center relative"
-      >
-        <div className="absolute inset-0 bg-gradient-to-bl from-secondary-dark/30 via-primary-dark to-secondary-dark/20" />
-        <div className="relative z-10 text-center">
-          <h2 className="text-4xl font-bold text-text-primary mb-4">
-            About Section
-          </h2>
-          <p className="text-text-secondary">Coming soon...</p>
-        </div>
-      </section>
-
+      {/* Remaining placeholder sections */}
       <section
         id="projects"
         className="min-h-screen flex items-center justify-center relative"
