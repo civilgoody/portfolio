@@ -25,6 +25,19 @@ export interface SocialLink {
   icon: string;
 }
 
+export interface ContactMethod {
+  id: string;
+  label: string;
+  description: string;
+  href: string;
+  icon: string;
+}
+
+export interface ProjectType {
+  value: string;
+  label: string;
+}
+
 export const PROJECTS: Project[] = [
   {
     id: "elemental-recs",
@@ -116,6 +129,32 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
+export const CONTACT_METHODS: ContactMethod[] = [
+  {
+    id: "email",
+    label: "Email",
+    description: "hello@goodlucklawani.dev",
+    href: "mailto:hello@goodlucklawani.dev",
+    icon: "mail",
+  },
+  {
+    id: "calendar",
+    label: "Schedule a Call",
+    description: "Book a 30-minute consultation",
+    href: "https://cal.com/goodlucklawani",
+    icon: "calendar",
+  },
+];
+
+export const PROJECT_TYPES: ProjectType[] = [
+  { value: "", label: "Select project type" },
+  { value: "fullstack-web-app", label: "Fullstack Web Application" },
+  { value: "frontend-project", label: "Frontend Development" },
+  { value: "consulting", label: "Technical Consulting" },
+  { value: "collaboration", label: "Collaboration Opportunity" },
+  { value: "other", label: "Other" },
+];
+
 export const SKILLS = {
   frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   backend: ["Node.js", "Supabase", "API Development", "Database Design"],
@@ -142,3 +181,17 @@ export const EXPERIENCE = [
     description: "Built and optimized educational platform serving 5K+ users",
   },
 ];
+
+export const CONTACT_INFO = {
+  currentStatus: {
+    role: "Junior Frontend Developer",
+    company: "CareSync Healthcare",
+    description: "building modern healthcare solutions with Next.js and React",
+    isOpenToFreelance: true,
+  },
+  funFacts: {
+    avatarRewatches: "∞",
+    favoriteNumber: 3,
+    favoriteColor: "#0090F1",
+  },
+};

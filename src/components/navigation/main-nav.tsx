@@ -66,7 +66,7 @@ export function MainNav() {
     <>
       {/* Desktop Navigation - Top */}
       <nav className="hidden md:fixed md:top-0 md:left-0 md:right-0 md:z-50 md:flex md:justify-center md:p-4">
-        <div className="bg-secondary-dark/95 backdrop-blur-md border border-border rounded-full px-6 py-3 shadow-xl">
+        <div className="bg-secondary/95 backdrop-blur-md border border-border rounded-full px-6 py-3 shadow-xl">
           <ul className="flex items-center space-x-8">
             {NAV_LINKS.map((link) => (
               <li key={link.id}>
@@ -75,8 +75,8 @@ export function MainNav() {
                   className={cn(
                     "text-sm font-medium transition-colors duration-200 link-underline",
                     activeSection === link.id
-                      ? "text-primary-blue"
-                      : "text-text-secondary hover:text-text-primary"
+                      ? "text-primary"
+                      : "text-secondary-foreground hover:text-foreground"
                   )}
                 >
                   {link.label}
@@ -116,16 +116,16 @@ export function MainNav() {
                 <button
                   onClick={() => handleNavClick(link.id)}
                   className={cn(
-                    "flex items-center space-x-3 bg-secondary-dark/95 backdrop-blur-md border border-border rounded-full px-4 py-3 text-sm font-medium transition-all duration-200 hover:scale-105 element-bend shadow-lg",
+                    "flex items-center space-x-3 bg-secondary/95 backdrop-blur-md border border-border rounded-full px-4 py-3 text-sm font-medium transition-all duration-200 hover:scale-105 element-bend shadow-lg",
                     activeSection === link.id
-                      ? "text-primary-blue border-primary-blue bg-primary-blue/20"
-                      : "text-text-secondary hover:text-text-primary hover:border-primary-blue/50"
+                      ? "text-primary border-primary bg-primary/20"
+                      : "text-secondary-foreground hover:text-foreground hover:border-primary/50"
                   )}
                 >
                   <SectionIcon sectionId={link.id} />
                   <span className="whitespace-nowrap">{link.label}</span>
                   {activeSection === link.id && (
-                    <div className="w-2 h-2 bg-primary-blue rounded-full animate-precision-pulse" />
+                    <div className="w-2 h-2 bg-primary rounded-full animate-precision-pulse" />
                   )}
                 </button>
               </div>
@@ -136,9 +136,9 @@ export function MainNav() {
         <button
           onClick={toggleFab}
           className={cn(
-            "relative w-16 h-16 bg-secondary-dark/90 hover:bg-secondary-dark rounded-full shadow-xl transition-all duration-300 flex items-center justify-center group backdrop-blur-sm border-2 border-text-muted/30 hover:border-primary-blue/50",
+            "relative w-16 h-16 bg-secondary/90 hover:bg-secondary rounded-full shadow-xl transition-all duration-300 flex items-center justify-center group backdrop-blur-sm border-2 border-muted/30 hover:border-primary/50",
             isFabOpen
-              ? "rotate-180 scale-110 border-primary-blue/70"
+              ? "rotate-180 scale-110 border-primary/70"
               : "rotate-0 scale-100"
           )}
           aria-label="Navigation Menu"
@@ -163,8 +163,8 @@ export function MainNav() {
           {isFabOpen && (
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-8 h-8">
-                <div className="absolute left-1/2 top-1/2 w-6 h-0.5 bg-text-primary transform -translate-x-1/2 -translate-y-1/2 rotate-45 transition-all duration-200 shadow-sm" />
-                <div className="absolute left-1/2 top-1/2 w-6 h-0.5 bg-text-primary transform -translate-x-1/2 -translate-y-1/2 -rotate-45 transition-all duration-200 shadow-sm" />
+                <div className="absolute left-1/2 top-1/2 w-6 h-0.5 bg-foreground transform -translate-x-1/2 -translate-y-1/2 rotate-45 transition-all duration-200 shadow-sm" />
+                <div className="absolute left-1/2 top-1/2 w-6 h-0.5 bg-foreground transform -translate-x-1/2 -translate-y-1/2 -rotate-45 transition-all duration-200 shadow-sm" />
               </div>
             </div>
           )}
@@ -172,19 +172,18 @@ export function MainNav() {
           {/* Pulse ring when active section changes */}
           <div
             className={cn(
-              "absolute inset-0 rounded-full border-2 border-primary-blue transition-all duration-500",
+              "absolute inset-0 rounded-full border-2 border-primary transition-all duration-500",
               "animate-ping opacity-0"
-              // Show ping when section changes
             )}
           />
 
           {/* Subtle glow effect */}
-          <div className="absolute inset-0 rounded-full bg-primary-blue/20 scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 rounded-full bg-primary/20 scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </button>
 
         {/* Current section indicator */}
-        <div className="absolute -top-1 -left-1 w-5 h-5 bg-primary-blue rounded-full flex items-center justify-center shadow-lg border-2 border-secondary-dark">
-          <div className="w-2 h-2 bg-text-primary rounded-full animate-precision-pulse" />
+        <div className="absolute -top-1 -left-1 w-5 h-5 bg-primary rounded-full flex items-center justify-center shadow-lg border-2 border-secondary">
+          <div className="w-2 h-2 bg-foreground rounded-full animate-precision-pulse" />
         </div>
       </div>
     </>

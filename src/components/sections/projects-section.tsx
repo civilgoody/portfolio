@@ -31,9 +31,9 @@ export function ProjectsSection() {
     >
       <div className="absolute inset-0 bg-gradient-to-tr from-primary-dark via-secondary-dark/40 to-primary-dark" />
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-primary-blue/15 rounded-full animate-pulse delay-300" />
-        <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-primary-blue/20 rounded-full animate-pulse delay-700" />
-        <div className="absolute top-2/3 left-1/2 w-2 h-2 bg-primary-blue/10 rounded-full animate-pulse delay-1000" />
+        <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-primary/15 rounded-full animate-pulse delay-300" />
+        <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-primary/20 rounded-full animate-pulse delay-700" />
+        <div className="absolute top-2/3 left-1/2 w-2 h-2 bg-primary/10 rounded-full animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
@@ -44,12 +44,12 @@ export function ProjectsSection() {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            Featured <span className="text-primary-blue">Projects</span>
+            Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-text-secondary text-lg mb-6">
             Fullstack applications built with precision and purpose
           </p>
-          <div className="w-24 h-1 bg-primary-blue mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
         {/* Projects Grid */}
@@ -77,7 +77,7 @@ export function ProjectsSection() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center bg-primary-blue text-primary-dark px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 precision-focus shadow-lg"
+            className="inline-flex items-center bg-primary text-primary-dark px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 precision-focus shadow-lg"
           >
             Get In Touch
             <svg
@@ -118,7 +118,7 @@ function ProjectCard({
   return (
     <div
       className={cn(
-        "group relative bg-secondary-dark/50 border border-border rounded-xl overflow-hidden transition-all duration-500 hover:border-primary-blue/50 element-bend",
+        "group relative bg-secondary-dark/50 border border-border rounded-xl overflow-hidden transition-all duration-500 hover:border-primary/50 element-bend",
         isVisible ? "animate-slide-up" : "opacity-0 translate-y-8"
       )}
       style={{ animationDelay: `${300 + index * 200}ms` }}
@@ -128,7 +128,7 @@ function ProjectCard({
       {/* Card Header */}
       <div className="p-6 pb-4">
         <div className="flex items-start justify-between mb-4">
-          <h3 className="text-xl font-bold text-text-primary group-hover:text-primary-blue transition-colors duration-300">
+          <h3 className="text-xl font-bold text-text-primary group-hover:text-primary transition-colors duration-300">
             {project.title}
           </h3>
           <div className="flex space-x-2">
@@ -136,7 +136,7 @@ function ProjectCard({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-primary-blue/10 border border-primary-blue/30 rounded-lg text-primary-blue hover:bg-primary-blue/20 transition-all duration-200 precision-focus"
+              className="p-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all duration-200 precision-focus"
               aria-label="View live project"
             >
               <svg
@@ -158,7 +158,7 @@ function ProjectCard({
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-text-muted/10 border border-text-muted/30 rounded-lg text-text-muted hover:bg-text-muted/20 hover:text-text-primary transition-all duration-200 precision-focus"
+                className="p-2 bg-muted/10 border border-muted/30 rounded-lg text-muted hover:bg-muted/20 hover:text-text-primary transition-all duration-200 precision-focus"
                 aria-label="View source code"
               >
                 <svg
@@ -182,13 +182,13 @@ function ProjectCard({
           {project.technologies.slice(0, 3).map((tech) => (
             <span
               key={tech}
-              className="px-2 py-1 bg-primary-blue/10 border border-primary-blue/30 rounded-md text-xs text-primary-blue"
+              className="px-2 py-1 bg-primary/10 border border-primary/30 rounded-md text-xs text-primary"
             >
               {tech}
             </span>
           ))}
           {project.technologies.length > 3 && (
-            <span className="px-2 py-1 bg-text-muted/10 border border-text-muted/30 rounded-md text-xs text-text-muted">
+            <span className="px-2 py-1 bg-muted/10 border border-muted/30 rounded-md text-xs text-muted">
               +{project.technologies.length - 3}
             </span>
           )}
@@ -202,8 +202,8 @@ function ProjectCard({
                 key={metric.label}
                 className="flex justify-between items-center text-xs"
               >
-                <span className="text-text-muted">{metric.label}:</span>
-                <span className="text-accent-success font-medium">
+                <span className="text-muted">{metric.label}:</span>
+                <span className="text-success font-medium">
                   {metric.value}
                 </span>
               </div>
@@ -229,14 +229,14 @@ function ProjectCard({
 
           {/* Full Tech Stack */}
           <div className="mb-4">
-            <h5 className="text-xs font-medium text-text-muted mb-2">
+            <h5 className="text-xs font-medium text-muted mb-2">
               Technologies Used:
             </h5>
             <div className="flex flex-wrap gap-1">
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 bg-primary-blue/5 border border-primary-blue/20 rounded-md text-xs text-primary-blue/80"
+                  className="px-2 py-1 bg-primary/5 border border-primary/20 rounded-md text-xs text-primary/80"
                 >
                   {tech}
                 </span>
@@ -252,8 +252,8 @@ function ProjectCard({
                   key={metric.label}
                   className="flex justify-between items-center text-xs"
                 >
-                  <span className="text-text-muted">{metric.label}:</span>
-                  <span className="text-accent-success font-medium">
+                  <span className="text-muted">{metric.label}:</span>
+                  <span className="text-success font-medium">
                     {metric.value}
                   </span>
                 </div>
@@ -267,7 +267,7 @@ function ProjectCard({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-primary-blue text-primary-dark text-center py-2 px-4 rounded-lg text-sm font-semibold hover:bg-blue-400 transition-all duration-300 precision-focus"
+              className="flex-1 bg-primary text-primary-dark text-center py-2 px-4 rounded-lg text-sm font-semibold hover:bg-blue-400 transition-all duration-300 precision-focus"
             >
               View Live
             </a>
@@ -276,7 +276,7 @@ function ProjectCard({
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 border border-text-muted/30 text-text-muted text-center py-2 px-4 rounded-lg text-sm font-semibold hover:bg-text-muted/10 hover:text-text-primary transition-all duration-300 precision-focus"
+                className="flex-1 border border-muted/30 text-muted text-center py-2 px-4 rounded-lg text-sm font-semibold hover:bg-muted/10 hover:text-text-primary transition-all duration-300 precision-focus"
               >
                 Source
               </a>
@@ -288,7 +288,7 @@ function ProjectCard({
       {/* Hover indicator */}
       <div
         className={cn(
-          "absolute bottom-0 left-0 right-0 h-1 bg-primary-blue transition-all duration-300",
+          "absolute bottom-0 left-0 right-0 h-1 bg-primary transition-all duration-300",
           isHovered ? "opacity-100" : "opacity-0"
         )}
       />
