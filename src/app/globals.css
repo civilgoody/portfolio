@@ -1,92 +1,14 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 @custom-variant dark (&:is(.dark *));
-
-:root {
-  /* Updated color scheme - Better contrast, less blue dominance */
-  --primary-blue: #0090f1;
-  --primary-dark: #0a0e1a; /* Darker for better contrast */
-  --secondary-dark: #1a1f2e; /* New secondary dark */
-  --text-primary: #ffffff; /* Pure white for better contrast */
-  --text-secondary: #e2e8f0; /* Lighter secondary text */
-  --text-muted: #94a3b8; /* Better muted text */
-  --accent-success: #10b981;
-  --accent-warning: #f59e0b;
-
-  /* Shadcn/ui color system - updated for better contrast */
-  --radius: 0.625rem;
-  --background: #0a0e1a;
-  --foreground: #ffffff;
-  --card: #1a1f2e;
-  --card-foreground: #ffffff;
-  --popover: #1a1f2e;
-  --popover-foreground: #ffffff;
-  --primary: #0090f1;
-  --primary-foreground: #0a0e1a;
-  --secondary: #374151;
-  --secondary-foreground: #ffffff;
-  --muted: #2d3748;
-  --muted-foreground: #94a3b8;
-  --accent: #374151;
-  --accent-foreground: #ffffff;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #374151;
-  --input: #2d3748;
-  --ring: #0090f1;
-}
-
-@theme inline {
-  --color-primary-blue: var(--primary-blue);
-  --color-primary-dark: var(--primary-dark);
-  --color-secondary-dark: var(--secondary-dark);
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-muted);
-  --color-accent-success: var(--accent-success);
-  --color-accent-warning: var(--accent-warning);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* Custom animations */
-  --animate-fluid-rise: fluid-rise 0.6s ease-out;
-  --animate-element-flow: element-flow 2s ease-in-out infinite;
-  --animate-precision-pulse: precision-pulse 1.5s ease-in-out infinite;
-  --animate-slide-up: slide-up 0.5s ease-out;
-  --animate-fade-in: fade-in 0.3s ease-out;
-
-  /* Shadcn/ui colors */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-}
 
 @layer base {
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground font-sans;
     line-height: 1.6;
@@ -106,7 +28,7 @@
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: var(--primary-blue);
+  background-color: #0090f1;
   transform: scaleX(0);
   transition: transform 0.3s ease-out;
 }
@@ -126,7 +48,7 @@
 
 /* Precision focus ring for sniping theme */
 .precision-focus {
-  @apply focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-primary-dark;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-primary-dark;
 }
 
 /* Project card details overlay - Simple CSS-only solution */
@@ -149,8 +71,6 @@
     pointer-events: auto;
   }
 }
-
-/* Removed old gradient classes - now using consistent inline gradients */
 
 /* Custom animations */
 @keyframes fluid-rise {
@@ -205,8 +125,6 @@
     opacity: 1;
   }
 }
-
-/* Removed flow animation - no longer needed */
 
 /* Utility classes */
 .animate-fluid-rise {

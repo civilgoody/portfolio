@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import animate from "tailwindcss-animate";
 const config: Config = {
   darkMode: "class",
   content: [
@@ -10,49 +10,43 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Custom blue theme colors
-        "primary-blue": "#0090F1",
-        "primary-dark": "#0F172A",
-        "text-primary": "#F8FAFC",
-        "text-secondary": "#64748B",
-        "text-muted": "#475569",
-        "accent-success": "#10B981",
-        "accent-warning": "#F59E0B",
-
-        // Shadcn/ui color system
         background: "#0F172A",
         foreground: "#F8FAFC",
-        border: "hsl(217.2 32.6% 17.5%)",
-        input: "hsl(217.2 32.6% 17.5%)",
+        border: "#374151",
+        input: "#2d3748",
         ring: "#0090F1",
+        primary: {
+          DEFAULT: "#0090F1",
+          foreground: "#0F172A",
+          dark: "#0a0e1a",
+        },
+        secondary: {
+          DEFAULT: "#1a1f2e",
+          foreground: "#F8FAFC",
+          dark: "#1a1f2e",
+        },
+        muted: {
+          DEFAULT: "#94a3b8",
+          foreground: "#94a3b8",
+        },
         card: {
-          DEFAULT: "hsl(222.2 84% 4.9%)",
+          DEFAULT: "#1a1f2e",
           foreground: "#F8FAFC",
         },
         popover: {
-          DEFAULT: "hsl(222.2 84% 4.9%)",
+          DEFAULT: "#1a1f2e",
           foreground: "#F8FAFC",
-        },
-        primary: {
-          DEFAULT: "#0090F1",
-          foreground: "#F8FAFC",
-        },
-        secondary: {
-          DEFAULT: "hsl(217.2 32.6% 17.5%)",
-          foreground: "#F8FAFC",
-        },
-        muted: {
-          DEFAULT: "hsl(217.2 32.6% 17.5%)",
-          foreground: "hsl(215 20.2% 65.1%)",
         },
         accent: {
-          DEFAULT: "hsl(217.2 32.6% 17.5%)",
+          DEFAULT: "#374151",
           foreground: "#F8FAFC",
         },
         destructive: {
-          DEFAULT: "hsl(0 62.8% 30.6%)",
+          DEFAULT: "#ef4444",
           foreground: "#F8FAFC",
         },
+        success: "#10B981",
+        warning: "#F59E0B",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
@@ -110,13 +104,13 @@ const config: Config = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "0.5rem", // 8px
+        md: "0.375rem", // 6px  
+        sm: "0.25rem", // 4px
       },
     },
   },
-  plugins: [],
+  plugins: [animate],
 };
 
 export default config;
