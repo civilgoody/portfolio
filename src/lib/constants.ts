@@ -10,6 +10,7 @@ export interface Project {
     label: string;
     value: string;
   }[];
+  imageUrl: string;
 }
 
 export interface NavLink {
@@ -53,11 +54,13 @@ export const PROJECTS: Project[] = [
       "Tailwind CSS",
     ],
     liveUrl: "https://e-recs.vercel.app",
+    githubUrl: "https://github.com/civilgoody/elemental-recs",
     metrics: [
       { label: "AI Model", value: "Gemini Pro" },
       { label: "Movie Database", value: "TMDB API" },
       { label: "Theme", value: "Avatar TLA" },
     ],
+    imageUrl: "/images/e-recs.jpeg",
   },
   {
     id: "pq-library",
@@ -73,11 +76,13 @@ export const PROJECTS: Project[] = [
       "SEO",
     ],
     liveUrl: "https://pql.vercel.app",
+    githubUrl: "https://github.com/civilgoody/q",
     metrics: [
       { label: "Views", value: "5K+" },
       { label: "Engagement", value: "61%" },
       { label: "Optimization", value: "300KB-2MB" },
     ],
+    imageUrl: "/images/pqlibrary.png",
   },
   {
     id: "cyber-medical",
@@ -93,11 +98,13 @@ export const PROJECTS: Project[] = [
       "Real-time Monitoring",
     ],
     liveUrl: "https://cybermedical.vercel.app",
+    githubUrl: "https://github.com/civilgoody/cybermedical",
     metrics: [
       { label: "Security", value: "MFA Protected" },
       { label: "Analysis", value: "AI-Powered" },
       { label: "Updates", value: "Real-time" },
     ],
+    imageUrl: "/images/cybermedical.png",
   },
 ];
 
@@ -112,19 +119,19 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "github",
     label: "GitHub",
-    href: "https://github.com/goodluckurom",
+    href: "https://github.com/civilgoody",
     icon: "github",
   },
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://linkedin.com/in/goodluck-lawani",
+    href: "https://linkedin.com/in/codelawani",
     icon: "linkedin",
   },
   {
     id: "email",
     label: "Email",
-    href: "mailto:hello@goodlucklawani.dev",
+    href: "mailto:giftofgoody@gmail.com",
     icon: "mail",
   },
 ];
@@ -133,15 +140,15 @@ export const CONTACT_METHODS: ContactMethod[] = [
   {
     id: "email",
     label: "Email",
-    description: "hello@goodlucklawani.dev",
-    href: "mailto:hello@goodlucklawani.dev",
+    description: "giftofgoody@gmail.com",
+    href: "mailto:giftofgoody@gmail.com",
     icon: "mail",
   },
   {
     id: "calendar",
     label: "Schedule a Call",
     description: "Book a 30-minute consultation",
-    href: "https://cal.com/goodlucklawani",
+    href: "https://cal.com/civilgoody",
     icon: "calendar",
   },
 ];
