@@ -66,7 +66,7 @@ export function MainNav() {
     <>
       {/* Desktop Navigation - Top */}
       <nav className="hidden md:fixed md:top-0 md:left-0 md:right-0 md:z-50 md:flex md:justify-center md:p-4">
-        <div className="bg-secondary/95 backdrop-blur-md border border-border rounded-full px-6 py-3 shadow-xl">
+        <div className="bg-secondary/30 backdrop-blur-md border border-border rounded-full px-6 py-3 shadow-xl">
           <ul className="flex items-center space-x-8">
             {NAV_LINKS.map((link) => (
               <li key={link.id}>
