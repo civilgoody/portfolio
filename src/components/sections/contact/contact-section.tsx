@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { SocialIcon } from "@/lib/icons";
 import Link from "next/link";
 import { ContactForm } from "./contact-form";
+import { CalendarIcon, MailIcon } from "lucide-react";
 
 export function ContactSection() {
 
@@ -35,7 +36,7 @@ export function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left: Contact Info */}
-          <div className="transition-all duration-1000 delay-300">
+          <div>
             <div className="space-y-8">
               {/* Current Status */}
               <div className="bg-secondary-dark/50 border border-border rounded-xl p-6">
@@ -68,50 +69,26 @@ export function ContactSection() {
                     className="flex items-center space-x-4 p-4 bg-secondary-dark/30 border border-border rounded-lg hover:border-primary/50 transition-all duration-300 element-bend group"
                   >
                     <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      <svg
-                        className="w-5 h-5 text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
+                      <MailIcon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <div className="text-primary font-medium group-hover:text-primary transition-colors duration-300">
                         Email
                       </div>
                       <div className="text-secondary-foreground text-sm">
-                        hello@goodlucklawani.dev
+                        giftofgoody@gmail.com
                       </div>
                     </div>
                   </a>
 
                   <a
-                    href="https://cal.com/goodlucklawani"
+                    href="https://cal.com/civilgoody"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-4 p-4 bg-secondary-dark/30 border border-border rounded-lg hover:border-primary/50 transition-all duration-300 element-bend group"
                   >
                     <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      <svg
-                        className="w-5 h-5 text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
+                      <CalendarIcon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <div className="text-primary font-medium group-hover:text-primary transition-colors duration-300">
@@ -131,7 +108,7 @@ export function ContactSection() {
                   Find Me Online
                 </h3>
                 <div className="flex space-x-4">
-                  {SOCIAL_LINKS.map((social, index) => (
+                  {SOCIAL_LINKS.map((social) => (
                     <Link
                       key={social.id}
                       href={social.href}
@@ -141,7 +118,7 @@ export function ContactSection() {
                         "w-12 h-12 bg-secondary-dark/50 border border-border rounded-lg flex items-center justify-center transition-all duration-300 element-bend precision-focus",
                         "text-secondary-foreground hover:text-primary hover:border-primary/50"
                       )}
-                      style={{ animationDelay: `${index * 100}ms` }}
+                      // style={{ animationDelay: `${index * 100}ms` }}
                       aria-label={social.label}
                     >
                       <SocialIcon icon={social.icon} />
@@ -153,13 +130,13 @@ export function ContactSection() {
           </div>
 
           {/* Right: Contact Form */}
-          <div className="transition-all duration-1000 delay-500">
+          <div>
             <ContactForm />
           </div>
         </div>
 
         {/* Bottom Message */}
-        <div className="text-center mt-16 transition-all duration-1000 delay-700">
+        <div className="text-center mt-16">
           <div className="bg-secondary-dark/30 border border-border rounded-xl p-6">
             <p className="text-secondary-foreground mb-2">
               <span className="text-primary font-semibold">Fun fact:</span>{" "}
