@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+const PROJECT_TYPES = [
+  "Fullstack Web Application",
+  "Frontend Development",
+  "Technical Consulting",
+  "Collaboration Opportunity",
+  "Other",
+];
 export function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -65,7 +73,7 @@ export function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200 precision-focus"
+              className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted transition-colors duration-200 precision-focus"
               placeholder="Your full name"
             />
           </div>
@@ -83,7 +91,7 @@ export function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200 precision-focus"
+              className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted transition-colors duration-200 precision-focus"
               placeholder="your@email.com"
             />
           </div>
@@ -96,12 +104,12 @@ export function ContactForm() {
           >
             Project Type
           </label>
-          <select
+          {/* <select
             id="subject"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-secondary-foreground focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200 precision-focus"
+            className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-secondary-foreground transition-colors duration-200 precision-focus"
           >
             <option value="">Select project type</option>
             <option value="fullstack-web-app">Fullstack Web Application</option>
@@ -109,7 +117,27 @@ export function ContactForm() {
             <option value="consulting">Technical Consulting</option>
             <option value="collaboration">Collaboration Opportunity</option>
             <option value="other">Other</option>
-          </select>
+          </select> */}
+          <Select
+            onValueChange={(value) => {
+              setFormData((prev) => ({
+                ...prev,
+                subject: value,
+              }));
+            }}
+            defaultValue={formData.subject}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select project type" />
+            </SelectTrigger>
+            <SelectContent>
+              {PROJECT_TYPES.map((type) => (
+                <SelectItem key={type} value={type}>
+                  {type}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
         <div>
@@ -126,7 +154,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             rows={5}
-            className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200 resize-none precision-focus"
+            className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted transition-colors duration-200 resize-none precision-focus"
             placeholder="Tell me about your project, timeline, and any specific requirements..."
           />
         </div>
@@ -146,7 +174,7 @@ export function ContactForm() {
               !formData.email ||
               !formData.message
               ? "bg-muted/20 text-muted cursor-not-allowed"
-              : "bg-primary primary-dark hover:bg-blue-400 transform hover:scale-[1.02] shadow-lg"
+              : "bg-primary text-primary-dark hover:bg-primary/80 transform hover:scale-[1.02] shadow-lg"
           )}
         >
           {isSubmitting ? (
