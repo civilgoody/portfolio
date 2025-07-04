@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Loader2 } from "lucide-react";
 
 const PROJECT_TYPES = [
   "Fullstack Web Application",
@@ -104,20 +105,6 @@ export function ContactForm() {
           >
             Project Type
           </label>
-          {/* <select
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-secondary-foreground transition-colors duration-200 precision-focus"
-          >
-            <option value="">Select project type</option>
-            <option value="fullstack-web-app">Fullstack Web Application</option>
-            <option value="frontend-project">Frontend Development</option>
-            <option value="consulting">Technical Consulting</option>
-            <option value="collaboration">Collaboration Opportunity</option>
-            <option value="other">Other</option>
-          </select> */}
           <Select
             onValueChange={(value) => {
               setFormData((prev) => ({
@@ -179,25 +166,7 @@ export function ContactForm() {
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center">
-              <svg
-                className="animate-spin -ml-1 mr-3 h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                />
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                />
-              </svg>
+              <Loader2 className="animate-spin -ml-1 mr-3 h-5 w-5" />
               Sending...
             </span>
           ) : (
@@ -209,8 +178,8 @@ export function ContactForm() {
         {submitStatus === "success" && (
           <div className="text-center p-4 bg-success/10 border border-success/30 rounded-lg">
             <p className="text-success font-medium">
-              ✓ Message sent successfully! I&apos;ll get back to you within 24
-              hours.
+              ✓ Ok I&apos;ll be honest. This isn&apos;t working yet. Pls contact
+              me via any of the social links.
             </p>
           </div>
         )}
