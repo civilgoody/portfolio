@@ -35,20 +35,18 @@ export function ProjectsSection() {
             <ProjectCard
               key={project.id}
               project={project}
-              // index={index}
-              // isVisible={isVisible}
             />
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16 transition-all duration-1000 delay-1000">
+        <div className="text-center mt-16">
           <p className="text-text-secondary mb-6">
             Want to see more projects or collaborate?
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center bg-primary text-primary-dark px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 precision-focus shadow-lg"
+            className="inline-flex items-center bg-primary text-primary-dark px-6 py-3 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300 transform hover:scale-105 precision-focus shadow-lg"
           >
             Get In Touch
             <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -66,12 +64,12 @@ interface ProjectCardProps {
 function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div
-      className="group relative bg-secondary-dark/50 border border-border rounded-xl overflow-hidden transition-all duration-500 hover:border-primary/50 element-bend"
+      className="relative bg-secondary-dark/50 border border-border rounded-xl overflow-hidden transition-all duration-500 hover:border-primary/50 element-bend"
     >
       {/* Card Header */}
       <div className="p-6 pb-4">
         <div className="flex items-start justify-between mb-4">
-          <h3 className="text-xl font-bold text-text-primary group-hover:text-primary transition-colors duration-300">
+          <h3 className="text-xl font-bold text-primary group-hover:text-primary transition-colors duration-300">
             {project.title}
           </h3>
           <div className="flex space-x-2">
@@ -89,7 +87,7 @@ function ProjectCard({ project }: ProjectCardProps) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-muted/10 border border-muted/30 rounded-lg text-muted hover:bg-muted/20 hover:text-text-primary transition-all duration-200 precision-focus"
+                className="p-2 bg-muted/10 border border-muted/30 rounded-lg text-muted hover:bg-muted/20 transition-all duration-200 precision-focus"
                 aria-label="View source code"
               >
                 <FaGithub className="w-4 h-4" />
