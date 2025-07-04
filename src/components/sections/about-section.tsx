@@ -21,7 +21,7 @@ export function AboutSection() {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Personal Story */}
-          <div className="transition-all duration-1000 delay-300">
+          <div>
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-text-primary mb-4">
                 Crafting Digital Experiences with{" "}
@@ -85,7 +85,7 @@ export function AboutSection() {
           </div>
 
           {/* Right: Skills & Experience */}
-          <div className="transition-all duration-1000 delay-500">
+          <div>
             {/* Skills Section */}
             <div className="mb-12">
               <h3 className="text-xl font-bold text-text-primary mb-6 flex items-center">
