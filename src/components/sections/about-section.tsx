@@ -1,26 +1,6 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { SKILLS, EXPERIENCE } from "@/lib/constants";
 
 export function AboutSection() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const section = document.getElementById("about");
-    if (section) observer.observe(section);
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
@@ -31,11 +11,7 @@ export function AboutSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         {/* Section Header */}
-        <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? "animate-fluid-rise" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="text-center mb-16 transition-all duration-1000">
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
             About <span className="text-primary">Me</span>
           </h2>
@@ -45,11 +21,7 @@ export function AboutSection() {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Personal Story */}
-          <div
-            className={`transition-all duration-1000 delay-300 ${
-              isVisible ? "animate-slide-up" : "opacity-0 translate-y-4"
-            }`}
-          >
+          <div className="transition-all duration-1000 delay-300">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-text-primary mb-4">
                 Crafting Digital Experiences with{" "}
@@ -113,11 +85,7 @@ export function AboutSection() {
           </div>
 
           {/* Right: Skills & Experience */}
-          <div
-            className={`transition-all duration-1000 delay-500 ${
-              isVisible ? "animate-fade-in" : "opacity-0"
-            }`}
-          >
+          <div className="transition-all duration-1000 delay-500">
             {/* Skills Section */}
             <div className="mb-12">
               <h3 className="text-xl font-bold text-text-primary mb-6 flex items-center">
@@ -126,14 +94,8 @@ export function AboutSection() {
               </h3>
 
               <div className="space-y-6">
-                {Object.entries(SKILLS).map(([category, skills], index) => (
-                  <div
-                    key={category}
-                    className={`transition-all duration-500 ${
-                      isVisible ? "animate-slide-up" : "opacity-0"
-                    }`}
-                    style={{ animationDelay: `${600 + index * 200}ms` }}
-                  >
+                {Object.entries(SKILLS).map(([category, skills]) => (
+                  <div key={category} className="transition-all duration-500">
                     <h4 className="text-secondary-foreground font-medium mb-3 capitalize">
                       {category}
                     </h4>
@@ -161,13 +123,7 @@ export function AboutSection() {
 
               <div className="space-y-4">
                 {EXPERIENCE.map((exp, index) => (
-                  <div
-                    key={exp.company}
-                    className={`relative pl-8 pb-6 transition-all duration-500 ${
-                      isVisible ? "animate-slide-up" : "opacity-0"
-                    }`}
-                    style={{ animationDelay: `${800 + index * 150}ms` }}
-                  >
+                  <div key={exp.company} className="relative pl-8 pb-6 transition-all duration-500">
                     {/* Timeline dot */}
                     <div className="absolute left-0 top-1 w-3 h-3 bg-primary rounded-full border-2 border-secondary-dark" />
                     {/* Timeline line */}

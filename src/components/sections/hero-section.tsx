@@ -1,17 +1,8 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { SOCIAL_LINKS } from "@/lib/constants";
 import Link from "next/link";
 import { SocialIcon } from "@/lib/icons";
 
 export function HeroSection() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <section
       id="hero"
@@ -28,11 +19,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Main heading with staggered animation */}
-        <div
-          className={`transition-all duration-1000 ${
-            isVisible ? "animate-fluid-rise" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="transition-all duration-1000">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="text-foreground">Goodluck</span>
             <br />
@@ -41,11 +28,7 @@ export function HeroSection() {
         </div>
 
         {/* Subtitle with delay */}
-        <div
-          className={`transition-all duration-1000 delay-300 ${
-            isVisible ? "animate-slide-up" : "opacity-0 translate-y-4"
-          }`}
-        >
+        <div className="transition-all duration-1000 delay-300">
           <p className="text-xl md:text-2xl text-secondary-foreground mb-2">
             Fullstack Next.js Developer
           </p>
@@ -58,11 +41,7 @@ export function HeroSection() {
         </div>
 
         {/* CTA buttons with more delay */}
-        <div
-          className={`transition-all duration-1000 delay-500 ${
-            isVisible ? "animate-fade-in" : "opacity-0"
-          }`}
-        >
+        <div className="transition-all duration-1000 delay-500">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="#projects"
@@ -80,11 +59,7 @@ export function HeroSection() {
         </div>
 
         {/* Social links with individual delays */}
-        <div
-          className={`transition-all duration-1000 delay-700 ${
-            isVisible ? "animate-fade-in" : "opacity-0"
-          }`}
-        >
+        <div className="transition-all duration-1000 delay-700">
           <div className="flex justify-center space-x-6">
             {SOCIAL_LINKS.map((social, index) => (
               <Link
