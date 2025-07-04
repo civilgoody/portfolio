@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Goodluck Lawani Portfolio",
     images: [
       {
-        url: "/images/portfolio-shot.png",
+        url: "/images/portfolio-shot.webp",
         width: 1200,
         height: 630,
         alt: "Goodluck Lawani - Fullstack Next.js Developer Portfolio",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description:
       "Precision-focused fullstack developer building modern web experiences with Next.js, React, and AI integration.",
     creator: "@civilgoody",
-    images: ["/images/portfolio-shot.png"],
+    images: ["/images/portfolio-shot.webp"],
   },
   robots: {
     index: true,
