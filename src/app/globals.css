@@ -37,7 +37,6 @@
   transform: scaleX(1);
 }
 
-/* Avatar-inspired element bending animation */
 .element-bend {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -46,30 +45,8 @@
   transform: translateY(-2px) scale(1.02);
 }
 
-/* Precision focus ring for sniping theme */
 .precision-focus {
-  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-primary-dark;
-}
-
-/* Project card details overlay - Simple CSS-only solution */
-.project-details {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-/* Touch devices: click to toggle (using React state) */
-.project-card.expanded .project-details {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Hover devices: hover to show */
-@media (hover: hover) and (pointer: fine) {
-  .project-card:hover .project-details {
-    opacity: 1;
-    pointer-events: auto;
-  }
+  @apply focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:ring-offset-primary-dark;
 }
 
 /* Custom animations */
