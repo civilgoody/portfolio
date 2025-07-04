@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
   {
     id: "elemental-recs",
     title: "Elemental Recs",
-    description: "AI-powered Avatar TLA movie recommender using Gemini AI",
+    description: "AI-powered Avatar: The Last Airbender inspired movie/tv show recommender using Gemini AI",
     details:
       "A fullstack Next.js application that combines my passion for Avatar: The Last Airbender with modern AI technology. Users can discover movies based on elemental themes, with personalized recommendations powered by Google's Gemini AI and real-time data from TMDB API.",
     technologies: [
@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://e-recs.vercel.app",
     githubUrl: "https://github.com/civilgoody/elemental-recs",
     metrics: [
-      { label: "AI Model", value: "Gemini Pro" },
+      { label: "AI Model", value: "Gemini AI" },
       { label: "Movie Database", value: "TMDB API" },
       { label: "Theme", value: "Avatar TLA" },
     ],

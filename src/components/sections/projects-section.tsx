@@ -24,7 +24,7 @@ export function ProjectsSection() {
             Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-text-secondary text-lg mb-6">
-            Fullstack applications built with precision and purpose
+            Fullstack applications built by yours truly
           </p>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>

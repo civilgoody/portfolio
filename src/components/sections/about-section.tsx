@@ -51,15 +51,13 @@ export function AboutSection() {
               </p>
 
               <p className="text-secondary-foreground leading-relaxed">
-                When I&apos;m not coding, you&apos;ll find me immersed in the
-                world of{" "}
+                When I&apos;m not coding, you&apos;ll find me immersed in an {" "}
                 <span className="text-primary">
-                  Avatar: The Last Airbender
+                  Anime/K-Drama
                 </span>{" "}
                 or perfecting my aim in{" "}
                 <span className="text-primary">Call of Duty Mobile</span>.
-                Both passions influence my work - the fluid adaptability of
-                element bending and the focused precision of a perfect shot.
+                Once again, I love snipers a lot and it directly translates to a super keen eye for detail in my work.
               </p>
 
               {/* Fun Facts */}
@@ -75,9 +73,9 @@ export function AboutSection() {
                   <div className="text-sm text-muted">Favorite Color</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">∞</div>
+                  <div className="text-2xl font-bold text-primary">ATLA</div>
                   <div className="text-sm text-muted">
-                    Avatar Rewatches
+                    Favorite Show
                   </div>
                 </div>
               </div>

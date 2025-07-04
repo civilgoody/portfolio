@@ -139,10 +139,8 @@ export function ContactSection() {
         <div className="text-center mt-16">
           <div className="bg-secondary-dark/30 border border-border rounded-xl p-6">
             <p className="text-secondary-foreground mb-2">
-              <span className="text-primary font-semibold">Fun fact:</span>{" "}
-              I&apos;ve watched Avatar: The Last Airbender{" "}
-              <span className="text-primary">∞</span> times and my favorite
-              number is <span className="text-primary font-bold">3</span>.
+              <span className="text-primary font-semibold">💙</span>{" "}
+              I challenge <span className="text-primary">design and product decisions</span> that compromise <span className="text-primary">user experience</span>, because great apps demand it!
             </p>
             <p className="text-muted text-sm">
               Let&apos;s discuss your project over some virtual tea! 🍵
