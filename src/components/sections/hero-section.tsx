@@ -43,18 +43,18 @@ export function HeroSection() {
         {/* CTA buttons with more delay */}
         <div className="transition-all duration-1000 delay-500">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a
+            <Link
               href="#projects"
-              className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 precision-focus shadow-lg"
+              className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300 transform hover:scale-105 precision-focus shadow-lg"
             >
               View Projects
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contact"
-              className="border-2 border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 precision-focus shadow-lg"
+              className="border-2 border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 precision-focus shadow-lg"
             >
               Get In Touch
-            </a>
+            </Link>
           </div>
         </div>
 
