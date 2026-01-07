@@ -4,7 +4,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center relative py-20"
+      className="flex items-center justify-center relative py-20"
     >
       <div className="absolute inset-0 bg-gradient-to-bl from-secondary-dark/30 via-primary-dark to-secondary-dark/20" />
 

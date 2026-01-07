@@ -12,7 +12,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center relative py-20"
+      className="flex items-center justify-center relative py-20"
     >
       <div className="absolute inset-0 bg-gradient-to-tl from-secondary-dark/25 via-primary-dark to-secondary-dark/35" />
       <div className="absolute inset-0">
@@ -57,80 +57,80 @@ export function ContactSection() {
               </div>
 
               {/* Contact Junior Methods */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-bold text-secondary-foreground mb-4">
-                  Get In Touch
-                </h3>
-
-                <div className="space-y-3">
-                  <a
-                    href="mailto:giftofgoody@gmail.com"
-                    className="flex items-center space-x-4 p-4 bg-secondary-dark/30 border border-border rounded-lg hover:border-primary/50 transition-all duration-300 element-bend group"
-                  >
-                    <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      <MailIcon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-primary font-medium group-hover:text-primary transition-colors duration-300">
-                        Email
-                      </div>
-                      <div className="text-secondary-foreground text-sm">
-                        giftofgoody@gmail.com
-                      </div>
-                    </div>
-                  </a>
-
-                  <a
-                    href="https://cal.com/civilgoody"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-4 bg-secondary-dark/30 border border-border rounded-lg hover:border-primary/50 transition-all duration-300 element-bend group"
-                  >
-                    <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      <CalendarIcon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-primary font-medium group-hover:text-primary transition-colors duration-300">
-                        Schedule a Call
-                      </div>
-                      <div className="text-secondary-foreground text-sm">
-                        Book a 30-minute consultation
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
 
               {/* Social Links */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-bold text-secondary-foreground">
-                  Find Me Online
-                </h3>
-                <div className="flex space-x-4">
-                  {SOCIAL_LINKS.map((social) => (
-                    <Link
-                      key={social.id}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={cn(
-                        "w-12 h-12 bg-secondary-dark/50 border border-border rounded-lg flex items-center justify-center transition-all duration-300 element-bend precision-focus",
-                        "text-secondary-foreground hover:text-primary hover:border-primary/50"
-                      )}
-                      // style={{ animationDelay: `${index * 100}ms` }}
-                      aria-label={social.label}
-                    >
-                      <SocialIcon icon={social.icon} />
-                    </Link>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
 
           {/* Right: Contact Form */}
-          <div>
-            <ContactForm />
+          <div className="space-y-4">
+            <div className="space-y-4">
+              {/* <h3 className="text-lg font-bold text-secondary-foreground mb-4">
+                Get In Touch
+              </h3> */}
+
+              <div className="space-y-3">
+                <a
+                  href="mailto:giftofgoody@gmail.com"
+                  className="flex items-center space-x-4 p-4 bg-secondary-dark/30 border border-border rounded-lg hover:border-primary/50 transition-all duration-300 element-bend group"
+                >
+                  <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <MailIcon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-primary font-medium group-hover:text-primary transition-colors duration-300">
+                      Email
+                    </div>
+                    <div className="text-secondary-foreground text-sm">
+                      giftofgoody@gmail.com
+                    </div>
+                  </div>
+                </a>
+
+                <Link
+                  href="https://cal.com/civilgoody"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-4 p-4 bg-secondary-dark/30 border border-border rounded-lg hover:border-primary/50 transition-all duration-300 element-bend group"
+                >
+                  <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <CalendarIcon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-primary font-medium group-hover:text-primary transition-colors duration-300">
+                      Schedule a Call
+                    </div>
+                    <div className="text-secondary-foreground text-sm">
+                      Book a 30-minute consultation
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {/* <h3 className="text-lg font-bold text-secondary-foreground">
+                Find Me Online
+              </h3> */}
+              <div className="flex space-x-4">
+                {SOCIAL_LINKS.map((social) => (
+                  <Link
+                    key={social.id}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "w-12 h-12 bg-secondary-dark/50 border border-border rounded-lg flex items-center justify-center transition-all duration-300 element-bend precision-focus",
+                      "text-secondary-foreground hover:text-primary hover:border-primary/50"
+                    )}
+                    // style={{ animationDelay: `${index * 100}ms` }}
+                    aria-label={social.label}
+                  >
+                    <SocialIcon icon={social.icon} />
+                  </Link>
+                ))}
+              </div>
+            </div>
+            {/* <ContactForm /> */}
           </div>
         </div>
 
