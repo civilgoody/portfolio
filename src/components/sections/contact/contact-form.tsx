@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Loader2 } from "lucide-react";
 
 const PROJECT_TYPES = [
@@ -42,12 +48,12 @@ export function ContactForm() {
       // In a real app, you'd send this to your backend or email service
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setSubmitStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      // setFormData({ name: "", email: "", subject: "", message: "" });
     } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus("idle"), 3000);
+      setTimeout(() => setSubmitStatus("idle"), 6000);
     }
   };
 
@@ -65,7 +71,7 @@ export function ContactForm() {
               htmlFor="name"
               className="block text-secondary-foreground text-sm font-medium mb-2"
             >
-              Name *
+              Name
             </label>
             <input
               type="text"
@@ -73,7 +79,6 @@ export function ContactForm() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              required
               className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted transition-colors duration-200 precision-focus"
               placeholder="Your full name"
             />
@@ -83,7 +88,7 @@ export function ContactForm() {
               htmlFor="email"
               className="block text-secondary-foreground text-sm font-medium mb-2"
             >
-              Email *
+              Email
             </label>
             <input
               type="email"
@@ -91,7 +96,6 @@ export function ContactForm() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
               className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted transition-colors duration-200 precision-focus"
               placeholder="your@email.com"
             />
@@ -132,14 +136,13 @@ export function ContactForm() {
             htmlFor="message"
             className="block text-secondary-foreground text-sm font-medium mb-2"
           >
-            Message *
+            Message
           </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            required
             rows={5}
             className="w-full px-4 py-3 bg-primary-dark border border-border rounded-lg text-primary placeholder-muted transition-colors duration-200 resize-none precision-focus"
             placeholder="Tell me about your project, timeline, and any specific requirements..."
@@ -148,18 +151,10 @@ export function ContactForm() {
 
         <button
           type="submit"
-          disabled={
-            isSubmitting ||
-            !formData.name ||
-            !formData.email ||
-            !formData.message
-          }
+          disabled={isSubmitting}
           className={cn(
             "w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 precision-focus",
-            isSubmitting ||
-              !formData.name ||
-              !formData.email ||
-              !formData.message
+            isSubmitting
               ? "bg-muted/20 text-muted cursor-not-allowed"
               : "bg-primary text-primary-dark hover:bg-primary/80 transform hover:scale-[1.02] shadow-lg"
           )}
