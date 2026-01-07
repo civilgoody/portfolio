@@ -188,7 +188,7 @@ export const SKILLS = {
 export const EXPERIENCE = [
   {
     company: "Rokswood",
-    role: "Frontend Developer - Freelance",
+    role: "Frontend Developer - Contract",
     period: "Current",
     description: "Building ecommerce farming web app",
   },
