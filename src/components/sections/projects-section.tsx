@@ -2,9 +2,8 @@ import { PROJECTS } from "@/lib/constants";
 import { ArrowRightIcon } from "lucide-react";
 import { LuExternalLink } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
-
+import Image from "next/image";
 export function ProjectsSection() {
-
   return (
     <section
       id="projects"
@@ -32,10 +31,7 @@ export function ProjectsSection() {
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {PROJECTS.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-            />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
@@ -63,9 +59,7 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div
-      className="relative bg-secondary-dark/50 border border-border rounded-xl overflow-hidden transition-all duration-500 hover:border-primary/50 element-bend"
-    >
+    <div className="relative bg-secondary-dark/50 border border-border rounded-xl overflow-hidden transition-all duration-500 hover:border-primary/50 element-bend">
       {/* Card Header */}
       <div className="p-6 pb-4">
         <div className="flex items-start justify-between mb-4">
@@ -100,6 +94,16 @@ function ProjectCard({ project }: ProjectCardProps) {
           {project.description}
         </p>
 
+        <div>
+          <Image
+            src={project.imageUrl}
+            width={400}
+            height={300}
+            alt="Project Screenshot"
+            className="w-full object-cover mb-3 h-full"
+          />
+        </div>
+
         {/* Primary Tech Stack */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.slice(0, 3).map((tech) => (
@@ -118,7 +122,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Metrics */}
-        {project.metrics && (
+        {/* {project.metrics && (
           <div className="grid grid-cols-1 gap-2">
             {project.metrics.slice(0, 2).map((metric) => (
               <div
@@ -132,7 +136,7 @@ function ProjectCard({ project }: ProjectCardProps) {
               </div>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

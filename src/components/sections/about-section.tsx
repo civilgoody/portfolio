@@ -1,7 +1,6 @@
 import { SKILLS, EXPERIENCE } from "@/lib/constants";
 
 export function AboutSection() {
-
   return (
     <section
       id="about"
@@ -19,7 +18,7 @@ export function AboutSection() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Personal Story */}
           <div>
             <div className="space-y-6">
@@ -30,9 +29,9 @@ export function AboutSection() {
 
               <p className="text-secondary-foreground leading-relaxed">
                 I&apos;m a fullstack Next.js developer with{" "}
-                <strong className="text-primary">3+ years</strong> of
-                experience building modern web applications. Currently serving
-                as a Junior Frontend Developer at{" "}
+                <strong className="text-primary">3+ years</strong> of experience
+                building modern web applications. Currently serving as a Junior
+                Frontend Developer at{" "}
                 <span className="text-primary font-semibold">
                   CareSync Healthcare
                 </span>
@@ -41,8 +40,8 @@ export function AboutSection() {
 
               <p className="text-secondary-foreground leading-relaxed">
                 My journey began with a Civil Engineering background from the{" "}
-                <span className="text-primary">University of Lagos</span>{" "}
-                and specialized training at{" "}
+                <span className="text-primary">University of Lagos</span> and
+                specialized training at{" "}
                 <span className="text-primary">
                   Holberton School/ALX Africa
                 </span>
@@ -51,13 +50,12 @@ export function AboutSection() {
               </p>
 
               <p className="text-secondary-foreground leading-relaxed">
-                When I&apos;m not coding, you&apos;ll find me immersed in an {" "}
-                <span className="text-primary">
-                  Anime/K-Drama
-                </span>{" "}
-                or perfecting my aim in{" "}
-                <span className="text-primary">Call of Duty Mobile</span>.
-                Once again, I love snipers a lot and it directly translates to a super keen eye for detail in my work.
+                When I&apos;m not coding, you&apos;ll find me immersed in an{" "}
+                <span className="text-primary">Anime/K-Drama</span> or
+                perfecting my aim in{" "}
+                <span className="text-primary">Call of Duty Mobile</span>. Once
+                again, I love snipers a lot and it directly translates to a
+                super keen eye for detail in my work.
               </p>
 
               {/* Fun Facts */}
@@ -67,25 +65,17 @@ export function AboutSection() {
                   <div className="text-sm text-muted">Favorite Number</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">
-                    #0090F1
-                  </div>
+                  <div className="text-2xl font-bold text-primary">#0090F1</div>
                   <div className="text-sm text-muted">Favorite Color</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">ATLA</div>
-                  <div className="text-sm text-muted">
-                    Favorite Show
-                  </div>
+                  <div className="text-sm text-muted">Favorite Show</div>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Right: Skills & Experience */}
-          <div>
             {/* Skills Section */}
-            <div className="mb-12">
+            <div className="mt-3">
               <h3 className="text-xl font-bold text-text-primary mb-6 flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-precision-pulse" />
                 Technical Arsenal
@@ -111,7 +101,10 @@ export function AboutSection() {
                 ))}
               </div>
             </div>
+          </div>
 
+          {/* Right: Skills & Experience */}
+          <div>
             {/* Experience Timeline */}
             <div>
               <h3 className="text-xl font-bold text-text-primary mb-6 flex items-center">
@@ -121,7 +114,10 @@ export function AboutSection() {
 
               <div className="space-y-4">
                 {EXPERIENCE.map((exp, index) => (
-                  <div key={exp.company} className="relative pl-8 pb-6 transition-all duration-500">
+                  <div
+                    key={exp.company}
+                    className="relative pl-8 pb-6 transition-all duration-500"
+                  >
                     {/* Timeline dot */}
                     <div className="absolute left-0 top-1 w-3 h-3 bg-primary rounded-full border-2 border-secondary-dark" />
                     {/* Timeline line */}
@@ -141,9 +137,7 @@ export function AboutSection() {
                       <p className="text-primary font-medium text-sm mb-2">
                         {exp.company}
                       </p>
-                      <p className="text-muted text-sm">
-                        {exp.description}
-                      </p>
+                      <p className="text-muted text-sm">{exp.description}</p>
                     </div>
                   </div>
                 ))}

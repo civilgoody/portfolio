@@ -1,6 +1,6 @@
 "use client";
 
-import { SOCIAL_LINKS } from "@/lib/constants";
+import { EXPERIENCE, SOCIAL_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { SocialIcon } from "@/lib/icons";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import { ContactForm } from "./contact-form";
 import { CalendarIcon, MailIcon } from "lucide-react";
 
 export function ContactSection() {
-
+  const current = EXPERIENCE[0];
   return (
     <section
       id="contact"
@@ -46,18 +46,17 @@ export function ContactSection() {
                 </h3>
                 <p className="text-secondary-foreground leading-relaxed">
                   <span className="text-primary font-semibold">
-                    Junior Frontend Developer
+                    {current.role}
                   </span>{" "}
-                  at CareSync Healthcare, building modern healthcare solutions
-                  with Next.js and React.
+                  at {current.company}. {current.description}.
                 </p>
                 <div className="mt-4 inline-flex items-center text-success text-sm">
                   <div className="w-2 h-2 bg-success rounded-full mr-2 animate-pulse" />
-                  Open to freelance opportunities
+                  Open to any opportunities
                 </div>
               </div>
 
-              {/* Contact Methods */}
+              {/* Contact Junior Methods */}
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-secondary-foreground mb-4">
                   Get In Touch
@@ -139,8 +138,11 @@ export function ContactSection() {
         <div className="text-center mt-16">
           <div className="bg-secondary-dark/30 border border-border rounded-xl p-6">
             <p className="text-secondary-foreground mb-2">
-              <span className="text-primary font-semibold">💙</span>{" "}
-              I challenge <span className="text-primary">design and product decisions</span> that compromise <span className="text-primary">user experience</span>, because great apps demand it!
+              <span className="text-primary font-semibold">💙</span> I challenge{" "}
+              <span className="text-primary">design and product decisions</span>{" "}
+              that compromise{" "}
+              <span className="text-primary">user experience</span>, because
+              great apps demand it!
             </p>
             <p className="text-muted text-sm">
               Let&apos;s discuss your project over some virtual tea! 🍵
@@ -151,4 +153,3 @@ export function ContactSection() {
     </section>
   );
 }
-

@@ -41,26 +41,20 @@ export interface ProjectType {
 
 export const PROJECTS: Project[] = [
   {
-    id: "elemental-recs",
-    title: "Elemental Recs",
-    description: "AI-powered Avatar: The Last Airbender inspired movie/tv show recommender using Gemini AI",
+    id: "ezzfpl",
+    title: "EzzFpl",
+    description: "Fantasy Premier League Team Planner",
     details:
-      "A fullstack Next.js application that combines my passion for Avatar: The Last Airbender with modern AI technology. Users can discover movies based on elemental themes, with personalized recommendations powered by Google's Gemini AI and real-time data from TMDB API.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Gemini AI",
-      "TMDB API",
-      "Tailwind CSS",
-    ],
-    liveUrl: "https://e-recs.vercel.app",
-    githubUrl: "https://github.com/civilgoody/elemental-recs",
+      "As a huge FPL fan, I built an app to plan my team and shared with the fpl community on X.",
+    technologies: ["Next.js", "TypeScript"],
+    liveUrl: "https://ezzfpl.vercel.app",
+    githubUrl: "",
     metrics: [
-      { label: "AI Model", value: "Gemini AI" },
-      { label: "Movie Database", value: "TMDB API" },
-      { label: "Theme", value: "Avatar TLA" },
+      // { label: "Views", value: "5K+" },
+      // { label: "Engagement", value: "61%" },
+      // { label: "Optimization", value: "300KB-2MB" },
     ],
-    imageUrl: "/images/e-recs.jpeg",
+    imageUrl: "/images/ezzfpl.png",
   },
   {
     id: "pq-library",
@@ -106,6 +100,29 @@ export const PROJECTS: Project[] = [
     ],
     imageUrl: "/images/cybermedical.png",
   },
+  // {
+  //   id: "elemental-recs",
+  //   title: "Elemental Recs",
+  //   description:
+  //     "AI-powered Avatar: The Last Airbender inspired movie/tv show recommender using Gemini AI",
+  //   details:
+  //     "A fullstack Next.js application that combines my passion for Avatar: The Last Airbender with modern AI technology. Users can discover movies based on elemental themes, with personalized recommendations powered by Google's Gemini AI and real-time data from TMDB API.",
+  //   technologies: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "Gemini AI",
+  //     "TMDB API",
+  //     "Tailwind CSS",
+  //   ],
+  //   liveUrl: "https://e-recs.vercel.app",
+  //   githubUrl: "https://github.com/civilgoody/elemental-recs",
+  //   metrics: [
+  //     { label: "AI Model", value: "Gemini AI" },
+  //     { label: "Movie Database", value: "TMDB API" },
+  //     { label: "Theme", value: "Avatar TLA" },
+  //   ],
+  //   imageUrl: "/images/e-recs.jpeg",
+  // },
 ];
 
 export const NAV_LINKS: NavLink[] = [
@@ -170,9 +187,15 @@ export const SKILLS = {
 
 export const EXPERIENCE = [
   {
+    company: "Rokswood",
+    role: "Frontend Developer - Freelance",
+    period: "Current",
+    description: "Building ecommerce farming web app",
+  },
+  {
     company: "CareSync Healthcare",
     role: "Junior Frontend Developer",
-    period: "Current",
+    period: "Previous",
     description: "Building modern healthcare solutions with React and Next.js",
   },
   {
