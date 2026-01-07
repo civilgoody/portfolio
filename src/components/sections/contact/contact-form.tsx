@@ -102,7 +102,7 @@ export function ContactForm() {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <label
             htmlFor="subject"
             className="block text-secondary-foreground text-sm font-medium mb-2"
@@ -129,7 +129,7 @@ export function ContactForm() {
               ))}
             </SelectContent>
           </Select>
-        </div>
+        </div> */}
 
         <div>
           <label

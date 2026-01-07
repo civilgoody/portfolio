@@ -30,12 +30,7 @@ export function AboutSection() {
               <p className="text-secondary-foreground leading-relaxed">
                 I&apos;m a fullstack Next.js developer with{" "}
                 <strong className="text-primary">3+ years</strong> of experience
-                building modern web applications. Currently serving as a Junior
-                Frontend Developer at{" "}
-                <span className="text-primary font-semibold">
-                  CareSync Healthcare
-                </span>
-                , where I craft digital solutions that impact real lives.
+                building modern web applications.
               </p>
 
               <p className="text-secondary-foreground leading-relaxed">
@@ -43,23 +38,21 @@ export function AboutSection() {
                 <span className="text-primary">University of Lagos</span> and
                 specialized training at{" "}
                 <span className="text-primary">
-                  Holberton School/ALX Africa
+                  Holberton School/ALX Africa.
                 </span>
-                . This unique blend gives me a structural approach to code and
-                an eye for detail that rivals a sniper&apos;s precision.
               </p>
 
               <p className="text-secondary-foreground leading-relaxed">
                 When I&apos;m not coding, you&apos;ll find me immersed in an{" "}
                 <span className="text-primary">Anime/K-Drama</span> or
                 perfecting my aim in{" "}
-                <span className="text-primary">Call of Duty Mobile</span>. Once
-                again, I love snipers a lot and it directly translates to a
-                super keen eye for detail in my work.
+                <span className="text-primary">Call of Duty Mobile. </span>I
+                love snipers a lot and it directly translates to a super keen
+                eye for detail in my work.
               </p>
 
               {/* Fun Facts */}
-              <div className="grid grid-cols-3 gap-4 mt-8 p-6 bg-secondary-dark/50 rounded-lg border border-border">
+              {/* <div className="grid grid-cols-3 gap-4 mt-8 p-6 bg-secondary-dark/50 rounded-lg border border-border">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">3</div>
                   <div className="text-sm text-muted">Favorite Number</div>
@@ -72,7 +65,7 @@ export function AboutSection() {
                   <div className="text-2xl font-bold text-primary">ATLA</div>
                   <div className="text-sm text-muted">Favorite Show</div>
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* Skills Section */}
             <div className="mt-3">
