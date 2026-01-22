@@ -132,6 +132,8 @@ export const NAV_LINKS: NavLink[] = [
   { id: "contact", label: "Contact", href: "#contact" },
 ];
 
+const EMAIL = "civilgoody@gmail.com";
+
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "github",
@@ -142,13 +144,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://linkedin.com/in/codelawani",
+    href: "https://linkedin.com/in/civilgoody",
     icon: "linkedin",
   },
   {
     id: "email",
     label: "Email",
-    href: "mailto:giftofgoody@gmail.com",
+    href: `mailto:${EMAIL}`,
     icon: "mail",
   },
 ];
@@ -157,8 +159,8 @@ export const CONTACT_METHODS: ContactMethod[] = [
   {
     id: "email",
     label: "Email",
-    description: "giftofgoody@gmail.com",
-    href: "mailto:giftofgoody@gmail.com",
+    description: EMAIL,
+    href: `mailto:${EMAIL}`,
     icon: "mail",
   },
   {
