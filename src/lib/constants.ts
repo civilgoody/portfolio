@@ -78,51 +78,51 @@ export const PROJECTS: Project[] = [
     ],
     imageUrl: "/images/pqlibrary.png",
   },
-  {
-    id: "cyber-medical",
-    title: "Cyber Medical Dashboard",
-    description: "MFA-secured admin dashboard with AI threat analysis",
-    details:
-      "A comprehensive cybersecurity dashboard for medical institutions featuring multi-factor authentication, real-time threat monitoring, and AI-powered security analysis. Built with Supabase backend for secure data management and real-time updates.",
-    technologies: [
-      "Next.js",
-      "Supabase",
-      "MFA",
-      "AI Analysis",
-      "Real-time Monitoring",
-    ],
-    liveUrl: "https://cybermedical.vercel.app",
-    githubUrl: "https://github.com/civilgoody/cybermedical",
-    metrics: [
-      { label: "Security", value: "MFA Protected" },
-      { label: "Analysis", value: "AI-Powered" },
-      { label: "Updates", value: "Real-time" },
-    ],
-    imageUrl: "/images/cybermedical.png",
-  },
   // {
-  //   id: "elemental-recs",
-  //   title: "Elemental Recs",
-  //   description:
-  //     "AI-powered Avatar: The Last Airbender inspired movie/tv show recommender using Gemini AI",
+  //   id: "cyber-medical",
+  //   title: "Cyber Medical Dashboard",
+  //   description: "MFA-secured admin dashboard with AI threat analysis",
   //   details:
-  //     "A fullstack Next.js application that combines my passion for Avatar: The Last Airbender with modern AI technology. Users can discover movies based on elemental themes, with personalized recommendations powered by Google's Gemini AI and real-time data from TMDB API.",
+  //     "A comprehensive cybersecurity dashboard for medical institutions featuring multi-factor authentication, real-time threat monitoring, and AI-powered security analysis. Built with Supabase backend for secure data management and real-time updates.",
   //   technologies: [
   //     "Next.js",
-  //     "TypeScript",
-  //     "Gemini AI",
-  //     "TMDB API",
-  //     "Tailwind CSS",
+  //     "Supabase",
+  //     "MFA",
+  //     "AI Analysis",
+  //     "Real-time Monitoring",
   //   ],
-  //   liveUrl: "https://e-recs.vercel.app",
-  //   githubUrl: "https://github.com/civilgoody/elemental-recs",
+  //   liveUrl: "https://cybermedical.vercel.app",
+  //   githubUrl: "https://github.com/civilgoody/cybermedical",
   //   metrics: [
-  //     { label: "AI Model", value: "Gemini AI" },
-  //     { label: "Movie Database", value: "TMDB API" },
-  //     { label: "Theme", value: "Avatar TLA" },
+  //     { label: "Security", value: "MFA Protected" },
+  //     { label: "Analysis", value: "AI-Powered" },
+  //     { label: "Updates", value: "Real-time" },
   //   ],
-  //   imageUrl: "/images/e-recs.jpeg",
+  //   imageUrl: "/images/cybermedical.png",
   // },
+  {
+    id: "elemental-recs",
+    title: "Elemental Recs",
+    description:
+      "AI-powered Avatar: The Last Airbender inspired movie/tv show recommender using Gemini AI",
+    details:
+      "A fullstack Next.js application that combines my passion for Avatar: The Last Airbender with modern AI technology. Users can discover movies based on elemental themes, with personalized recommendations powered by Google's Gemini AI and real-time data from TMDB API.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Gemini AI",
+      "TMDB API",
+      "Tailwind CSS",
+    ],
+    liveUrl: "https://e-recs.vercel.app",
+    githubUrl: "https://github.com/civilgoody/elemental-recs",
+    metrics: [
+      { label: "AI Model", value: "Gemini AI" },
+      { label: "Movie Database", value: "TMDB API" },
+      { label: "Theme", value: "Avatar TLA" },
+    ],
+    imageUrl: "/images/e-recs.jpeg",
+  },
 ];
 
 export const NAV_LINKS: NavLink[] = [
