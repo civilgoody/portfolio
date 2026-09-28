@@ -123,7 +123,7 @@ export const PROJECTS: Project[] = [
   //     ],
   //     imageUrl: "/images/e-recs.jpeg",
   //   },
-  // ];
+];
 
 export const NAV_LINKS: NavLink[] = [
   { id: "hero", label: "Home", href: "#hero" },
