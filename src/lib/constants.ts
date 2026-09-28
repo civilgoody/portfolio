@@ -132,7 +132,7 @@ export const NAV_LINKS: NavLink[] = [
   { id: "contact", label: "Contact", href: "#contact" },
 ];
 
-const EMAIL = "civilgoody@gmail.com";
+const EMAIL = "goodydev3@gmail.com";
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
@@ -144,7 +144,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://linkedin.com/in/civilgoody",
+    href: "https://www.linkedin.com/in/goodydev",
     icon: "linkedin",
   },
   {
@@ -190,21 +190,15 @@ export const SKILLS = {
 export const EXPERIENCE = [
   {
     company: "Rokswood",
-    role: "Frontend Developer - Contract",
-    period: "Current",
-    description: "Building ecommerce farming web app",
+    role: "Frontend Developer",
+    period: "Sep 2025 - Present",
+    description: "Built the frontends of Rokswood Pulse (IoT monitoring SaaS, live with a customer) and ExportPadi (export marketplace, three Next.js apps)",
   },
   {
     company: "CareSync Healthcare",
-    role: "Junior Frontend Developer",
-    period: "Previous",
-    description: "Building modern healthcare solutions with React and Next.js",
-  },
-  {
-    company: "Recall AI",
     role: "Frontend Developer",
-    period: "Previous",
-    description: "Developed AI-powered user interfaces and experiences",
+    period: "Feb 2025 - Sep 2025",
+    description: "Top contributor to a care-home management platform: client records, multi-step forms, DocuSeal e-signatures",
   },
   {
     company: "PQ Library",
@@ -216,9 +210,9 @@ export const EXPERIENCE = [
 
 export const CONTACT_INFO = {
   currentStatus: {
-    role: "Junior Frontend Developer",
-    company: "CareSync Healthcare",
-    description: "building modern healthcare solutions with Next.js and React",
+    role: "Frontend Developer",
+    company: "Rokswood",
+    description: "building IoT monitoring and marketplace platforms with Next.js",
     isOpenToFreelance: true,
   },
   funFacts: {

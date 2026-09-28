@@ -23,7 +23,7 @@ export function HeroSection() {
             <span className="text-foreground">Goodluck </span>
             <span className="text-primary">Lawani</span>
           </h1>
-          <p className="text-muted mt-1">Fullstack Next.js Developer</p>
+          <p className="text-muted mt-1">Frontend Engineer</p>
         </div>
 
         {/* Social links */}

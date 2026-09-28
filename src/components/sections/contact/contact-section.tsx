@@ -71,7 +71,7 @@ export function ContactSection() {
 
               <div className="space-y-3">
                 <a
-                  href="mailto:giftofgoody@gmail.com"
+                  href="mailto:goodydev3@gmail.com"
                   className="flex items-center space-x-4 p-4 bg-secondary-dark/30 border border-border rounded-lg hover:border-primary/50 transition-all duration-300 element-bend group"
                 >
                   <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
@@ -82,7 +82,7 @@ export function ContactSection() {
                       Email
                     </div>
                     <div className="text-secondary-foreground text-sm">
-                      giftofgoody@gmail.com
+                      goodydev3@gmail.com
                     </div>
                   </div>
                 </a>

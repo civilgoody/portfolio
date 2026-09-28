@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://goodydev.vercel.app"),
-  title: "Goodluck Lawani | Fullstack Next.js Developer",
+  title: "Goodluck Lawani | Frontend Engineer",
   description:
-    "Fullstack Next.js developer with 3+ years of experience building modern web applications. Currently at CareSync Healthcare, crafting digital solutions with Nextjs, TypeScript, and AI integration.",
+    "Frontend engineer with 4 years of React and Next.js. Built the frontends of two production SaaS platforms at Rokswood and ships AI-assisted products of his own.",
   keywords: [
     "Goodluck Lawani",
     "Frontend Developer",
@@ -47,22 +47,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://goodydev.vercel.app",
-    title: "Goodluck Lawani | Fullstack Next.js Developer",
+    title: "Goodluck Lawani | Frontend Engineer",
     description:
-      "Fullstack developer building modern web experiences with Next.js, React, and AI integration. 3+ years of professional experience.",
+      "Frontend engineer with 4 years of React and Next.js. Built the frontends of two production SaaS platforms at Rokswood and ships AI-assisted products of his own.",
     siteName: "Goodluck Lawani Portfolio",
     images: [
       {
         url: "/images/portfolio-shot.webp",
         width: 1200,
         height: 630,
-        alt: "Goodluck Lawani - Fullstack Next.js Developer Portfolio",
+        alt: "Goodluck Lawani - Frontend Engineer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Goodluck Lawani | Fullstack Next.js Developer",
+    title: "Goodluck Lawani | Frontend Engineer",
     description:
       "Precision-focused fullstack developer building modern web experiences with Next.js, React, and AI integration.",
     creator: "@civilgoody",

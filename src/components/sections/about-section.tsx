@@ -28,8 +28,8 @@ export function AboutSection() {
               </h3>
 
               <p className="text-secondary-foreground leading-relaxed">
-                I&apos;m a fullstack Next.js developer with{" "}
-                <strong className="text-primary">3+ years</strong> of experience
+                I&apos;m a frontend engineer (React/Next.js) with{" "}
+                <strong className="text-primary">4 years</strong> of experience
                 building modern web applications.
               </p>
 
