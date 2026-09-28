@@ -100,30 +100,30 @@ export const PROJECTS: Project[] = [
   //   ],
   //   imageUrl: "/images/cybermedical.png",
   // },
-  {
-    id: "elemental-recs",
-    title: "Elemental Recs",
-    description:
-      "AI-powered Avatar: The Last Airbender inspired movie/tv show recommender using Gemini AI",
-    details:
-      "A fullstack Next.js application that combines my passion for Avatar: The Last Airbender with modern AI technology. Users can discover movies based on elemental themes, with personalized recommendations powered by Google's Gemini AI and real-time data from TMDB API.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Gemini AI",
-      "TMDB API",
-      "Tailwind CSS",
-    ],
-    liveUrl: "https://e-recs.vercel.app",
-    githubUrl: "https://github.com/civilgoody/elemental-recs",
-    metrics: [
-      { label: "AI Model", value: "Gemini AI" },
-      { label: "Movie Database", value: "TMDB API" },
-      { label: "Theme", value: "Avatar TLA" },
-    ],
-    imageUrl: "/images/e-recs.jpeg",
-  },
-];
+  //   {
+  //     id: "elemental-recs",
+  //     title: "Elemental Recs",
+  //     description:
+  //       "AI-powered Avatar: The Last Airbender inspired movie/tv show recommender using Gemini AI",
+  //     details:
+  //       "A fullstack Next.js application that combines my passion for Avatar: The Last Airbender with modern AI technology. Users can discover movies based on elemental themes, with personalized recommendations powered by Google's Gemini AI and real-time data from TMDB API.",
+  //     technologies: [
+  //       "Next.js",
+  //       "TypeScript",
+  //       "Gemini AI",
+  //       "TMDB API",
+  //       "Tailwind CSS",
+  //     ],
+  //     liveUrl: "https://e-recs.vercel.app",
+  //     githubUrl: "https://github.com/civilgoody/elemental-recs",
+  //     metrics: [
+  //       { label: "AI Model", value: "Gemini AI" },
+  //       { label: "Movie Database", value: "TMDB API" },
+  //       { label: "Theme", value: "Avatar TLA" },
+  //     ],
+  //     imageUrl: "/images/e-recs.jpeg",
+  //   },
+  // ];
 
 export const NAV_LINKS: NavLink[] = [
   { id: "hero", label: "Home", href: "#hero" },
